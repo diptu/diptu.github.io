@@ -13,7 +13,7 @@ jobs:
       - run: node --version
       - run: npm --version
       - uses: actions/checkout@v3
-      - run : npm install
+      - run : npm install gh-pages --save-dev
       - name: Build
         run: npm run build
       - name: Deploy

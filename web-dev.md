@@ -1,4 +1,4 @@
-![[diptu](https://scholar.google.com/citations?user=4e8-JGgAAAAJ&hl=en)](./img/gibli_dip.png)
+<img src="./img/gibli_dip.png" alt="diptu" style="width:200px;"/>
 ![Profile banner](https://i.imgur.com/VNP2tTx.gif)
 
 > Experienced software engineer with a strong foundation in data analysis. Proficient in Mern, SQL, and cloud platforms. Passionate about leveraging techonologices to address social, economic, and environmental challenges.

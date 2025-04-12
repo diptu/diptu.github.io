@@ -1,4 +1,5 @@
-![diptu](./img/gibli_diptu.jpg)
+<img src="./img/gibli_diptu.jpg" alt="diptu" style="width:200px;"/>
+
 ![Profile banner](https://i.imgur.com/VNP2tTx.gif)
 
 
@@ -38,8 +39,8 @@
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
 
-[Webdev](./web-dev.md)
-[ML](./.md)
+#### [Webdev](./web-dev.md)
+#### [ML](./.md)
 
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=henrythierrydev&theme=windows-dark)](https://git.io/streak-stats)

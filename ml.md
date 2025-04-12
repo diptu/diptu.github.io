@@ -1,4 +1,5 @@
-![diptu](./img/gibli_diptu.jpg)
+<img src="./img/gibli_diptu.jpg" alt="diptu" style="width:200px;"/>
+
 ![Profile banner](https://i.imgur.com/VNP2tTx.gif)
 
 

@@ -3,4 +3,4 @@
 
 
 ## Articles:
-https://scholar.google.com/citations?user=4e8-JGgAAAAJ&hl=en
+- https://scholar.google.com/citations?user=4e8-JGgAAAAJ&hl=en

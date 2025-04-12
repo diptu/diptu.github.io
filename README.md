@@ -40,7 +40,7 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
 
 #### [Webdev](./web-dev.md)
-#### [ML](./.md)
+#### [ML](./ml.md)
 
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=henrythierrydev&theme=windows-dark)](https://git.io/streak-stats)

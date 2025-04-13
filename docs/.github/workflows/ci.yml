@@ -10,8 +10,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # - uses: actions/checkout@v4
-      # Create Web Version (mkdocs)
       - uses: docker://squidfunk/mkdocs-material
         with:
           mkdocs_version: 'latest'

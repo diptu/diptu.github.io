@@ -1,6 +1,6 @@
 # Introduction to Node.js and Express
 
-??? info "What is Node.js?"
+!!!s info "What is Node.js?"
     Node.js is an **open-source** and **cross-platform** runtime environment for executing JavaScript code outside of a web browser. It is commonly used to build **back-end services**, also known as **APIs**.
 
     Node.js is particularly well-suited for building:
@@ -10,7 +10,7 @@
     * **Real-time** back-end services that power client applications
 
 
-??? success "Why Node?"
+!!! success "Why Node?"
 
     Node.js has become a preferred choice for backend development due to several compelling reasons:
 
@@ -34,7 +34,7 @@
 
         If the installation was successful, this command will output the installed version of Node.js. On Windows, you might need to restart your command prompt after installation before running this command.
 
-??? note "What is Express?" 
+!!! note "What is Express?" 
 
     Express is a **fast**, **unopinionated**, and **minimalist** web backend or server-side web framework for Node.js. Essentially, Express simplifies the process of building APIs and web applications with Node.js by providing a set of robust features and tools with less code.
 
@@ -63,7 +63,8 @@
     * **Postman (Recommended):** While not strictly required for development, **Postman** is a valuable tool for testing and interacting with your backend APIs. You can download it from the [Postman website](https://www.postman.com/downloads/).
   
 ## Crud-api
-??? note "projrct structure"    
+
+!!! note "projrct structure"    
     create a directory called server aand move into server directory.
     ```bash
     mkdir server
@@ -107,38 +108,36 @@
         └── ./server/package.json
     ```
 
-!!! info "Install Express.js"
+??? info "Install Express.js"
     ```bash
     `npm i express`
     ```
 
+??? info "Why use express?"
 
+    Installing Express allows us to:
 
-    ??? info "Why use express?"
+    * **Quickly set up a web server:** Express simplifies the process of creating and configuring HTTP servers in Node.js.
+    * **Define routes for your application:** It provides a clear and organized way to handle different HTTP requests (like GET, POST, PUT, DELETE) to specific URLs (routes) in your application.
+    * **Implement middleware:** Express allows you to use middleware functions to perform various tasks before or after handling a request, such as logging, authentication, and data parsing.
+    * **Build APIs:** It is a popular choice for building RESTful APIs that can be consumed by frontend applications or other services.
+    * **Render dynamic web pages:** Express can be used with templating engines to generate HTML content dynamically on the server.
 
-        Installing Express allows us to:
+    !!! note "Project Structure:"
+    ```plain
+    server
+        └── ./server/package.json
+        └── ./server/node_modules
+    ```
+    ```json title="package.json"
+    "dependencies": {
+    "express": "^5.1.0"
+    }
+    ```
 
-        * **Quickly set up a web server:** Express simplifies the process of creating and configuring HTTP servers in Node.js.
-        * **Define routes for your application:** It provides a clear and organized way to handle different HTTP requests (like GET, POST, PUT, DELETE) to specific URLs (routes) in your application.
-        * **Implement middleware:** Express allows you to use middleware functions to perform various tasks before or after handling a request, such as logging, authentication, and data parsing.
-        * **Build APIs:** It is a popular choice for building RESTful APIs that can be consumed by frontend applications or other services.
-        * **Render dynamic web pages:** Express can be used with templating engines to generate HTML content dynamically on the server.
+## Setting Up code Directory
 
-        !!! note "Project Structure:"
-        ```plain
-        server
-            └── ./server/package.json
-            └── ./server/node_modules
-        ```
-        ```json title="package.json"
-        "dependencies": {
-        "express": "^5.1.0"
-        }
-        ```
-
-# Setting Up code Directory
-
-## Creating the Source Directory
+### Creating the Source Directory
 
 The first step is to create a directory that will house all your project's source code files. A common convention is to name this directory `src` (short for "source").
 
@@ -165,9 +164,11 @@ app.listen(3000, ()=>{
 ```bash
 node src/index.js
 ```
-## Package Installation
+### Package Installation
 1. [Nodemon](#nodemon)
 2. [morgan](#morgan)
+3. [body-parser](#body-parser)
+4. [http-errors](#http-errors)
 
 ??? info " Why Use Nodemon?"
     * **Automatic Restarts:** The primary benefit of Nodemon is its ability to **automatically restart** your Node.js server upon saving changes to your files. This saves you valuable development time and allows you to focus on coding.
@@ -190,14 +191,14 @@ node src/index.js
     npm install --save-dev morgan
     ```
 
+    ```json title="package.json" linenums="14" hl_lines="2-3"
+        "devDependencies": {
+            "morgan": "^1.10.0",
+            "nodemon": "^3.1.9"
 
-```json title="package.json" linenums="14" hl_lines="2-3"
-    "devDependencies": {
-        "morgan": "^1.10.0",
-        "nodemon": "^3.1.9"
-}
-```
-Add the following lines to script section:
+    }
+    ```
+Now, Add the following lines to script section:
 ```json title="package.json" linenums="5" hl_lines="2-3"
 "scripts": {
     "start" : "node ./src/index.js",
@@ -218,7 +219,7 @@ npm run dev
 will run the commad `nodemon ./src/index.js`
 
 
-### Create a HTTP request
+## Create a HTTP request
 
 ```javascript title="index.js" linenums="1" hl_lines="4-10"
 const express = require('express');
@@ -243,7 +244,7 @@ npm run dev
 ```
 now we can visit [http://localhost:3000/products](http://localhost:3000/products) in our browser to see the response.
 
-```javascript title="package.json" linenums="1" hl_lines="4-6"
+```javascript title="index.js" linenums="1" hl_lines="4-6"
 const express = require('express');
 const app = express()
 
@@ -262,3 +263,96 @@ app.listen(3000, ()=>{
 })
 ```
 now if we send any request to server e,g [http://localhost:3000/products](http://localhost:3000/products) we'll see logs in the terminal.
+
+
+!!! info "[Express Middleware](https://expressjs.com/en/guide/using-middleware.html)"
+
+    Express middleware are functions that have access to the request object (`req`), the response object (`res`) and the `next` middleware function in the application’s request-response cycle. The `next` middleware function is commonly denoted by a variable named `next`.
+
+    Middleware functions can perform the following tasks:<br>
+
+      - Execute any code.<br>
+      -  Make changes to the request and the response objects.<br>
+      - End the request-response cycle.<br>
+      - Call the next middleware function in the stack.<br>
+      - If the current middleware function does not end the request-response cycle, it must call next() to pass control to the next middleware function. Otherwise, the request will be left hanging.<br>
+
+    We already used an application lavel middleware `morgan` in the above example. This middleware logs the request and response in the terminal every time a request is made to the server.
+
+!!! info " Why Use body-parser?"
+
+    A third pary middleware called `body-parser` is used to parse the request body. This middleware is used to pars incoming request bodies in a middleware before your handlers, available under the req.body property.
+
+    ```bash
+    npm i body-parser
+    ```
+```json title="package.json" linenums="14" hl_lines="2"
+    "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0"
+  },
+```
+
+!!! info "Error handling middleware"
+    At this stage we will use an [error handling middlewere](https://expressjs.com/en/guide/using-middleware.html#middleware.error-handling) to catch any error that may occur in the application. This middleware is used to catch any error that are not handlled anywhere.
+    First we will add error handling middleware to the Client side later we will add error handling middleware to the server side.
+
+??? info " Why Use http-errors"
+
+    - Create HTTP errors for Express
+
+    Install the package using npm:
+    ```bash
+    npm i http-errors
+    ```
+
+```json title="package.json" linenums="14" hl_lines="4"
+    "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "http-errors": "^2.0.0"
+},
+```
+### client error handling
+
+```javascript title="index.js" linenums="1" hl_lines="34-38"
+const express = require('express');
+const bodyParser = require('body-parser')
+
+const morgan = require('morgan')
+const app = express()
+
+// setup the logger
+app.use(morgan('dev'))
+
+// parse application/json
+app.use(bodyParser.json())
+
+app.get('/api/users', (req, res) => {
+    res.status(200).send(
+         {
+            'success': true,
+            'msg':'users is returned'}
+        );
+  })
+
+app.get('/products', (req, res) => {
+    res.status(200).json(
+         {
+            'success': true,
+            'msg':'products is returned'}
+        );
+  })
+
+
+app.listen(3000, ()=>{
+    console.log(`server running on http://localhost:3000`);
+})
+
+// client error handling
+app.use((err, req, res, next) => {
+    console.error(err.stack)
+    res.status(404).json({'msg': 'Invalid request'  });
+  })
+```
+Now if we try to make any invalid request to the client, it will return a 404 status code with a JSON response. for example if we try to make a request to [/product-details](`http://localhost:3000/product-deetail`)

@@ -14,7 +14,9 @@ copyright: Copyright &copy; 2025 - 2025 Nazmul Alam
 
 # Configuration
 theme:
-  name: material
+  # name: material
+  name: readthedocs
+
   palette: 
 
     # Palette toggle for light mode

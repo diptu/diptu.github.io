@@ -10,7 +10,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: docker://squidfunk/mkdocs-material
+      - uses: actions/configure-pages@v5
         with:
           mkdocs_version: 'latest'
       - name: Configure Git Credentials

@@ -105,7 +105,13 @@
     !!! note "Project Structure:"
     ```plain
      server
-        └── ./server/package.json
+        ├── ./package-lock.json
+        ├── ./package.json
+        ├── .env
+        └── ./src
+            ├── ./app.js
+            ├── ./index.js
+            └── ./secret.js
     ```
 
 ??? info "Install Express.js"
@@ -151,7 +157,7 @@ touch src/index.js
 ```
 ### Creating a Basic Express Server
 
-```javascript title="index.js" linenums="1"
+```javascript title="app.js" linenums="1"
 const express = require('express');
 const app = express()
 
@@ -169,7 +175,7 @@ node src/index.js
 2. [morgan](#morgan)
 3. [body-parser](#body-parser)
 4. [http-errors](#http-errors)
-
+5. [express-rate-limit](#express-rate-limit)
 ??? info " Why Use Nodemon?"
     * **Automatic Restarts:** The primary benefit of Nodemon is its ability to **automatically restart** your Node.js server upon saving changes to your files. This saves you valuable development time and allows you to focus on coding.
     * **No Code Changes Required:** Nodemon is designed to be a seamless replacement for the `node` command. You **don't need to modify your existing Node.js code** to use it.
@@ -222,19 +228,34 @@ will run the commad `nodemon ./src/index.js`
 ## Create a HTTP request
 
 ```javascript title="index.js" linenums="1" hl_lines="4-10"
+const app = require('./app.js');
+
+app.listen(3000, ()=>{
+    console.log(`server is running on http://localhost:3000`);
+})
+```
+
+```javascript title="app.js" linenums="1" hl_lines="4-10"
 const express = require('express');
 const app = express()
 
-app.get('/products', (req, res) => {
+app.get('/api/users', (req, res) => {
     res.status(200).send(
+         {
+            'success': true,
+            'msg':'users is returned'}
+        );
+  })
+
+app.get('/products', (req, res) => {
+    res.status(200).json(
          {
             'success': true,
             'msg':'products is returned'}
         );
   })
-app.listen(3000, ()=>{
-    console.log(`server is running on http://localhost:3000`);
-})
+
+module.exports = app
 ```
 
 Now let's the Development Application with Nodemon
@@ -244,7 +265,7 @@ npm run dev
 ```
 now we can visit [http://localhost:3000/products](http://localhost:3000/products) in our browser to see the response.
 
-```javascript title="index.js" linenums="1" hl_lines="4-6"
+```javascript title="app.js" linenums="1" hl_lines="4-6"
 const express = require('express');
 const app = express()
 
@@ -258,9 +279,7 @@ app.get('/products', (req, res) => {
             'msg':'products is returned'}
         );
   })
-app.listen(3000, ()=>{
-    console.log(`server running on http://localhost:3000`);
-})
+module.exports = app
 ```
 now if we send any request to server e,g [http://localhost:3000/products](http://localhost:3000/products) we'll see logs in the terminal.
 
@@ -295,7 +314,7 @@ now if we send any request to server e,g [http://localhost:3000/products](http:/
 
 !!! info "Error handling middleware"
     At this stage we will use an [error handling middlewere](https://expressjs.com/en/guide/using-middleware.html#middleware.error-handling) to catch any error that may occur in the application. This middleware is used to catch any error that are not handlled anywhere.
-    First we will add error handling middleware to the Client side later we will add error handling middleware to the server side.
+    First we will add error handling middleware to the Client side and then we will add error handling middleware to the server side.
 
 ??? info " Why Use http-errors"
 
@@ -315,7 +334,7 @@ now if we send any request to server e,g [http://localhost:3000/products](http:/
 ```
 ### client error handling
 
-```javascript title="index.js" linenums="1" hl_lines="34-38"
+```javascript title="index.js" linenums="1" hl_lines="34-44"
 const express = require('express');
 const bodyParser = require('body-parser')
 
@@ -344,15 +363,195 @@ app.get('/products', (req, res) => {
         );
   })
 
+// client error handling
+app.use(( req, res, next) => {  
+    res.status(404).json({'msg':'route not found!'});
+    next();
+  })
+// server error handling
+app.use(( error, req, res, next) => {  
+    console.error(err.stack)
+    res.status(500).json({'msg':'Invalid request!'});
+  })
 
-app.listen(3000, ()=>{
-    console.log(`server running on http://localhost:3000`);
+  module.exports = app
+
+```
+Now if we try to make any invalid request to the client, it will return a 404 status code with a JSON response. for example if we try to make a request to [/product-details](`http://localhost:3000/product-deetail`). will show us client error message but if we made a request to [/product/1](`http://localhost:3000/products/1`) will give us server error message.
+
+First application will look for client error. using
+ `next()` function. If client error is not found then it will look for server error. 
+
+### Improve error handling using http-errors:
+
+At this stage we will use `http-errors` package to improve our error handling. This package will help us to create custom error.
+
+### Security:
+
+**API security:**
+
+!!! info "Why use express-rate-limit"
+
+Basic rate-limiting `middleware` for Express. Use to limit repeated requests to public APIs and/or endpoints such as password reset.<br>
+    we want to limit the number of requests per minute from a client to prevent abuse of our API.<br>
+    using `app.use(limiter)` will limit the number of requests per minute from a client to prevent abuse of our API.
+
+    ```bash
+    npm i express-rate-limit
+    ```
+
+```json title="package.json" linenums="14" hl_lines="4"
+    "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "http-errors": "^2.0.0"
+},
+```
+
+```javascript title="index.js" linenums="9" hl_lines="1-8"
+const limiter = rateLimit({
+    windowMs: 5 * 60 * 1000, // 5 minutes
+    limit: 100, // Limit each IP to 100 requests per `window` (here, per 5 minutes).
+        message: 'Too many requests',
 })
 
-// client error handling
-app.use((err, req, res, next) => {
-    console.error(err.stack)
-    res.status(404).json({'msg': 'Invalid request'  });
-  })
+// Apply the rate limiting middleware to all requests.
+app.use(limiter)
 ```
-Now if we try to make any invalid request to the client, it will return a 404 status code with a JSON response. for example if we try to make a request to [/product-details](`http://localhost:3000/product-deetail`)
+
+**Environment setup:**<br>
+At this stage we will create a `.env` file in our `server` directory to stores environment-specific variables for an application, often including sensitive data like API keys and database credentials. This allows us to manage configurations without hardcoding them directly into the application's code, promoting flexibility and security. 
+
+```bash
+npm i dotenv
+```
+
+```json title="package.json" linenums="14" hl_lines="3"
+ "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.5.0",
+    "http-errors": "^2.0.0"
+  },
+```
+We want to read the port number from the `.env` file. We can do this by adding the following code to our `.env` and `app.js` files.
+
+```env title=".env" linenums="1" hl_lines="1"
+    PORT=3000
+```
+
+```javascript title="src/secret.js" linenums="1" hl_lines="1-3"
+    const dotenv = require('dotenv').config()
+    // read from `.env` if not found set 3000 as default port
+    PORT = process.env.PORT || 3000
+
+    module.exports = {PORT}
+```
+
+```javascript title="index.js" linenums="1" hl_lines="2"
+   const app = require('./app.js');
+    const {PORT} = require('./secret.js');
+    // responible for instantiating the server
+    app.listen(PORT, ()=>{
+        console.log(`server running on http://localhost:${PORT}`);
+    })
+
+```
+
+## Content Tabs
+
+This is some examples of content tabs.
+
+
+
+### Code so far
+
+=== "javascript"
+
+    ```js title="app.js" linenums="1"
+    const express = require('express');
+    const createError = require('http-errors')
+    const bodyParser = require('body-parser')
+    const rateLimit = require('express-rate-limit')
+    const morgan = require('morgan')
+    const app = express()
+
+
+    const limiter = rateLimit({
+        windowMs: 5 * 60 * 1000, // 5 minutes
+        limit: 100, // Limit each IP to 100 requests per `window` (here, per 5 minutes).
+            message: 'Too many requests',
+    })
+
+    // Apply the rate limiting middleware to all requests.
+    app.use(limiter)
+    // setup the logger
+    app.use(morgan('dev'))
+
+    // parse application/json
+    app.use(bodyParser.json())
+
+
+    app.get('/api/users', (req, res) => {
+        res.status(200).send(
+            {
+                'success': true,
+                'msg':'users is returned'}
+            );
+    })
+
+    app.get('/products', (req, res) => {
+        res.status(200).json(
+            {
+                'success': true,
+                'msg':'products is returned'}
+            );
+    })
+
+
+    // client error handling
+    app.use(( req, res, next) => { 
+    // http-errors   
+    next(createError(404, 'Route Not Found')); // check error
+    })
+
+    // server error handling => all errors will be logged here
+    app.use((err, req, res, next) => {
+    return res.status(err.status || 500).json({
+        success : false,
+        message : err.message
+        })
+        
+    })
+
+    module.exports = app
+    ```
+
+
+=== "javascript"
+
+    ```js title="index.js" linenums="1"
+    const app = require('./app.js');
+    const {PORT} = require('./secret.js');
+    // responible for instantiating the server
+    app.listen(PORT, ()=>{
+        console.log(`server running on http://localhost:${PORT}`);
+    })
+    ```
+
+=== "env"
+
+    ```env title=".env"
+    PORT=3000
+    ```
+=== "javascript"
+
+    ```js title="secret.js" linenums="1"
+    const dotenv = require('dotenv').config()
+    // read from `.env` if not found set 3000 as default port
+    PORT = process.env.PORT || 3000
+
+    module.exports = {PORT}
+    ```

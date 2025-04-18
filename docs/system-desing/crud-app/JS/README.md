@@ -157,7 +157,7 @@ touch src/index.js
 ```
 ### Creating a Basic Express Server
 
-```javascript title="app.js" linenums="1"
+```javascript title="index.js" linenums="1"
 const express = require('express');
 const app = express()
 
@@ -460,10 +460,6 @@ We want to read the port number from the `.env` file. We can do this by adding t
 
 ```
 
-## Content Tabs
-
-This is some examples of content tabs.
-
 
 
 ### Code so far
@@ -543,7 +539,7 @@ This is some examples of content tabs.
 
 === "env"
 
-    ```env title=".env"
+    ```env title=".env"  linenums="2"
     PORT=3000
     ```
 === "javascript"
@@ -554,4 +550,67 @@ This is some examples of content tabs.
     PORT = process.env.PORT || 3000
 
     module.exports = {PORT}
+    ```
+
+## Connect to MongoDB:
+
+
+=== "ENV"
+
+    ```env title=".env"
+    MONGO_USER = admin
+    MONGO_USER_PASS = admin123
+    DB_NAME = crud-api
+    MONGO_DB_URL= `mongodb+srv://admin:admin123@mern-ecomerce.to66f.mongodb.net/crud-api`
+
+
+    ```
+
+=== "JavaScript"
+
+    ```js title="src/config/data.js"  linenums="1"
+    const mongoose = require('mongoose');
+    const {MONGO_DB_URL} = require('../secret');
+    const connectionDB = async(options= {}) => {
+        try{
+            await mongoose.connect(MONGO_DB_URL, options);
+            console.log('DB connection established');
+            mongoose.connection.on('error', (error)=>{
+                console.error('Error connecting to  database : '+error.toString());
+            });
+        }catch(error){
+            console.error('Could not connect to  database : '+error.toString());
+        }
+
+    };
+    module.exports = connectionDB
+    ```
+
+=== "JavaScript"
+
+    ```js title="secret.js"  linenums="1"  hl_lines="4-5"
+    const dotenv = require('dotenv').config()
+    // read from `.env` if not found set 3000 as default port
+    PORT = process.env.PORT || 3000
+    const DB_NAME = process.env.DB_NAME || 'crud-api';
+    const MONGO_DB_URL = process.env.MONGO_DB_URL || `mongodb://localhost:27017/${DB_NAME}`;
+    module.exports = {PORT,
+        MONGO_DB_URL,
+        DEFAULT_USER_IMAGE
+    }
+
+    ```
+
+
+=== "JavaScript"
+
+    ```js title="index.js"  linenums="1"  hl_lines="7"
+    const app = require('./app.js');
+    const {PORT} = require('./secret.js');
+    const connectDB = require('./config/db.js');
+    // responible for instantiating the server
+    app.listen(PORT, async()=>{
+        console.log(`server running on http://localhost:${PORT}`);
+        await connectDB();
+    })
     ```

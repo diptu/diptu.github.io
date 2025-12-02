@@ -59,7 +59,9 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Getting started:
-    - user guide: ./system-desing/getting-started.md
-  - System Design:
-      - Topics : ./system-desing/index.md
+    - user guide: ./index.md
+  - Tech Stack:
+      - ML : ./docs/ml.md
+      - Web : ./docs/web-dev.md
+
   - License: LICENSE.md

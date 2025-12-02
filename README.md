@@ -1,47 +1,82 @@
-<img src="./img/gibli_diptu.jpg" alt="diptu" style="width:200px;"/>
+<img src="./img/gibli_diptu.jpg" alt="diptu" width="200"/>
 
 ![Profile banner](https://i.imgur.com/VNP2tTx.gif)
 
+# 👋 Hi, I'm Nazmul Alam (Diptu)
+**Full-Stack Developer (MERN) • Data Scientist • MLOps & DevOps**
 
-## Introduction
+Building **scalable web apps** and **data-driven ML pipelines** with focus on **time-series forecasting** and **CNN-based deep learning**.  
 
-> Experienced data scientist and software engineer with a strong foundation in data analysis and machine learning/deep learning. Proven track record in building and deploying robust ML models across diverse data modalities . Proficient in Python, SQL, and cloud platforms. Passionate about leveraging ML to address social, economic, and environmental challenges.
->
-## Tecnologies
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
-![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![PHP](https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white)
-![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
-![AWS](https://img.shields.io/badge/Amazon_AWS-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+---
 
-![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
-![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
-![Jquery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
-![JWT](https://img.shields.io/badge/json%20web%20tokens-323330?style=for-the-badge&logo=json-web-tokens&logoColor=pink)
-![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=for-the-badge&logo=graphql&logoColor=white)
-![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
-![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
-![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)
-![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white)
-![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
+## 🧭 About Me
 
-#### [Webdev](./docs/web-dev.md)
-#### [ML](./docs/ml.md)
+- 🌐 Full-stack developer: **MERN, FastAPI, Django**  
+- 🤖 Data Scientist: **Time-series forecasting, CNNs, Predictive Modeling**  
+- ⚙️ MLOps / DevOps: **Docker, Airflow, dbt, GitHub Actions, AWS, Azure**  
+- 🚀 Passionate about **SaaS platforms, real-time systems, AI automation**  
+- 🌱 Current Project: **CarbonIQ** — AI-powered carbon accounting & analytics  
 
+---
 
-[![GitHub Streak](https://streak-stats.demolab.com?user=henrythierrydev&theme=windows-dark)](https://git.io/streak-stats)
-![Henry's GitHub stats](https://github-readme-stats.vercel.app/api?username=diptu&show_icons=true&theme=transparent)
+## 🛠️ Tech Stack
+
+**Web Development:**  
+![JS](https://img.shields.io/badge/JS-F7DF1E?style=for-the-badge&logo=javascript) ![TS](https://img.shields.io/badge/TS-007ACC?style=for-the-badge&logo=typescript) ![Node](https://img.shields.io/badge/Node-6DA55F?style=for-the-badge&logo=node.js) ![Express](https://img.shields.io/badge/Express-404d59?style=for-the-badge&logo=express) ![React](https://img.shields.io/badge/React-20232a?style=for-the-badge&logo=react) ![Next](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js) ![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql)
+
+**Databases:**  
+![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql) ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb)
+
+**Languages:**  
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python) ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c) ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B) ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk)
+
+**ML / Data Science:**  
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch) ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow) ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-007ACC?style=for-the-badge&logo=scikit-learn)
+
+**DevOps / MLOps:**  
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions) ![Airflow](https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apache-airflow) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis) ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws) ![Azure](https://img.shields.io/badge/Azure-0089D6?style=for-the-badge&logo=microsoft-azure)
+
+---
+
+## 🚀 Featured Projects
+
+### **CarbonIQ**
+**Tech:** FastAPI • PyTorch • Airflow • PostgreSQL • Docker  
+AI-powered carbon accounting platform.  
+- 📊 Estimates CO₂e from kWh + grid intensity (**95% accuracy**)  
+- 🧠 Uses CNN + time-series models to infer missing energy data  
+- 🔄 Automated ETL pipelines via Airflow + dbt  
+- 🏗️ Multi-tenant API, fully containerized  
+
+🔗 [GitHub Repo](https://github.com/diptu/CarbonIQ)
+
+---
+
+### **EcoPulse**
+**Tech:** PyTorch • Airflow • dbt • MLflow • GitHub Actions • Docker • FastAPI • AWS  
+End-to-end MLOps pipeline.  
+- ⚡ Auto-trains models on push  
+- 📦 Model registry with MLflow  
+- 🚀 FastAPI inference server for production  
+- 🔁 Versioned deployments via GitHub Actions + Docker  
+
+---
+
+## 📚 Notes & Learning
+- 📘 [Web Development Notes](./docs/web-dev.md)  
+- 🤖 [Machine Learning Notes](./docs/ml.md)  
+
+---
+
+## 📊 GitHub Stats
+<p align="left">
+  <img src="https://streak-stats.demolab.com?user=diptu&theme=dark" alt="GitHub Streak" />
+  <img src="https://activity-graph.herokuapp.com/graph?username=diptu&theme=react-dark&area=true" alt="GitHub Activity Graph" />
+</p>
+
+---
+
+## 🌐 Connect With Me
+- LinkedIn — [diptu](https://www.linkedin.com/in/diptu/)  
+- Email — diptunazmulalam@gmail.com  
+- Portfolio — *coming soon*

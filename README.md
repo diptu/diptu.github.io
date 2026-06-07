@@ -1,10 +1,16 @@
-# <div align="center">👋 Hi, I'm Nazmul Alam Diptu</div>
+<div>
 
-<div align="center">
+<img src="img/gibli_diptu.jpg" width="320" align="left" alt="Nazmul Alam Diptu" />
 
-### Machine Learning Engineer • Data Engineer • Future Edge AI Researcher
+<h1 align="center">👋 Hi, I'm Nazmul Alam Diptu</h1>
 
+<h3 align="center">
+Machine Learning Engineer • Future Edge AI Researcher
+</h3>
+
+<p align="center">
 Building production-grade AI systems, scalable data platforms, and intelligent applications that bridge research and real-world impact.
+</p>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/diptu">
@@ -13,12 +19,11 @@ Building production-grade AI systems, scalable data platforms, and intelligent a
   <a href="https://github.com/diptu">
     <img src="https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github" />
   </a>
-  <!-- <a href="https://huggingface.co/YOUR_PROFILE">
-    <img src="https://img.shields.io/badge/HuggingFace-Models-yellow?style=for-the-badge&logo=huggingface" />
-  </a> -->
 </p>
 
 </div>
+
+<br clear="left"/>
 
 ---
 
@@ -28,12 +33,12 @@ I'm a Machine Learning Engineer and Data Engineer passionate about building inte
 
 My work focuses on:
 
-* 🤖 Machine Learning & Deep Learning
-* 📊 Data Engineering & Analytics
-* ⚙️ MLOps & Production ML Systems
-* 🧠 Computer Vision
-* 🔬 Edge AI Research
-* 🚗 Autonomous Systems
+- 🤖 Machine Learning & Deep Learning
+- 📊 Data Engineering & Analytics
+- ⚙️ MLOps & Production ML Systems
+- 🧠 Computer Vision
+- 🔬 Edge AI Research
+- 🚗 Autonomous Systems
 
 
 I enjoy transforming research ideas into production-ready systems using modern engineering practices.
@@ -231,7 +236,6 @@ Azure DevOps
 
 ### Machine Learning Engineering
 
-* Advanced PyTorch
 * Deep Learning System Design
 * Distributed Training
 * MLOps for Production AI
@@ -241,27 +245,21 @@ Azure DevOps
 
 * Apache Airflow
 * dbt
-* Data Pipeline Orchestration
 * Data Warehousing
-* Streaming Systems (Kafka)
 
 ### Cloud & Infrastructure
 
 * Azure Cloud Architecture
-* Kubernetes for AI Workloads
-* Infrastructure as Code
 * CI/CD for Machine Learning Systems
 
 ---
 
 ## Currently Reading
 
-* Introduction to Machine Learning with Python
 * Designing Data-Intensive Applications
 * Machine Learning Engineering
 * TinyML
 * Deep Learning (Goodfellow)
-* Probabilistic Machine Learning
 
 ---
 

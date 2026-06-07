@@ -1,82 +1,424 @@
-<img src="./img/gibli_diptu.jpg" alt="diptu" width="200"/>
+# <div align="center">👋 Hi, I'm Nazmul Alam Diptu</div>
 
-![Profile banner](https://i.imgur.com/VNP2tTx.gif)
+<div align="center">
 
-# 👋 Hi, I'm Nazmul Alam (Diptu)
-**Full-Stack Developer (MERN) • Data Scientist • MLOps & DevOps**
+### Machine Learning Engineer • Data Engineer • Future Edge AI Researcher
 
-Building **scalable web apps** and **data-driven ML pipelines** with focus on **time-series forecasting** and **CNN-based deep learning**.  
+Building production-grade AI systems, scalable data platforms, and intelligent applications that bridge research and real-world impact.
 
----
-
-## 🧭 About Me
-
-- 🌐 Full-stack developer: **MERN, FastAPI, Django**  
-- 🤖 Data Scientist: **Time-series forecasting, CNNs, Predictive Modeling**  
-- ⚙️ MLOps / DevOps: **Docker, Airflow, dbt, GitHub Actions, AWS, Azure**  
-- 🚀 Passionate about **SaaS platforms, real-time systems, AI automation**  
-- 🌱 Current Project: **CarbonIQ** — AI-powered carbon accounting & analytics  
-
----
-
-## 🛠️ Tech Stack
-
-**Web Development:**  
-![JS](https://img.shields.io/badge/JS-F7DF1E?style=for-the-badge&logo=javascript) ![TS](https://img.shields.io/badge/TS-007ACC?style=for-the-badge&logo=typescript) ![Node](https://img.shields.io/badge/Node-6DA55F?style=for-the-badge&logo=node.js) ![Express](https://img.shields.io/badge/Express-404d59?style=for-the-badge&logo=express) ![React](https://img.shields.io/badge/React-20232a?style=for-the-badge&logo=react) ![Next](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js) ![GraphQL](https://img.shields.io/badge/GraphQL-E10098?style=for-the-badge&logo=graphql)
-
-**Databases:**  
-![MySQL](https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql) ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb)
-
-**Languages:**  
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python) ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c) ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B) ![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk)
-
-**ML / Data Science:**  
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch) ![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow) ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-007ACC?style=for-the-badge&logo=scikit-learn)
-
-**DevOps / MLOps:**  
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker) ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions) ![Airflow](https://img.shields.io/badge/Airflow-017CEE?style=for-the-badge&logo=apache-airflow) ![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis) ![AWS](https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazon-aws) ![Azure](https://img.shields.io/badge/Azure-0089D6?style=for-the-badge&logo=microsoft-azure)
-
----
-
-## 🚀 Featured Projects
-
-### **CarbonIQ**
-**Tech:** FastAPI • PyTorch • Airflow • PostgreSQL • Docker  
-AI-powered carbon accounting platform.  
-- 📊 Estimates CO₂e from kWh + grid intensity (**95% accuracy**)  
-- 🧠 Uses CNN + time-series models to infer missing energy data  
-- 🔄 Automated ETL pipelines via Airflow + dbt  
-- 🏗️ Multi-tenant API, fully containerized  
-
-🔗 [GitHub Repo](https://github.com/diptu/CarbonIQ)
-
----
-
-### **EcoPulse**
-**Tech:** PyTorch • Airflow • dbt • MLflow • GitHub Actions • Docker • FastAPI • AWS  
-End-to-end MLOps pipeline.  
-- ⚡ Auto-trains models on push  
-- 📦 Model registry with MLflow  
-- 🚀 FastAPI inference server for production  
-- 🔁 Versioned deployments via GitHub Actions + Docker  
-
----
-
-## 📚 Notes & Learning
-- 📘 [Web Development Notes](./docs/web-dev.md)  
-- 🤖 [Machine Learning Notes](./docs/ml.md)  
-
----
-
-## 📊 GitHub Stats
-<p align="left">
-  <img src="https://streak-stats.demolab.com?user=diptu&theme=dark" alt="GitHub Streak" />
-  <img src="https://activity-graph.herokuapp.com/graph?username=diptu&theme=react-dark&area=true" alt="GitHub Activity Graph" />
+<p align="center">
+  <a href="https://www.linkedin.com/in/diptu">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin" />
+  </a>
+  <a href="https://github.com/diptu">
+    <img src="https://img.shields.io/badge/GitHub-Follow-black?style=for-the-badge&logo=github" />
+  </a>
+  <!-- <a href="https://huggingface.co/YOUR_PROFILE">
+    <img src="https://img.shields.io/badge/HuggingFace-Models-yellow?style=for-the-badge&logo=huggingface" />
+  </a> -->
 </p>
 
+</div>
+
 ---
 
-## 🌐 Connect With Me
-- LinkedIn — [diptu](https://www.linkedin.com/in/diptu/)  
-- Email — diptunazmulalam@gmail.com  
-- Portfolio — *coming soon*
+# 🚀 About Me
+
+I'm a Machine Learning Engineer and Data Engineer passionate about building intelligent systems that scale.
+
+My work focuses on:
+
+* 🤖 Machine Learning & Deep Learning
+* 📊 Data Engineering & Analytics
+* ⚙️ MLOps & Production ML Systems
+* 🧠 Computer Vision
+* 🔬 Edge AI Research
+* 🚗 Autonomous Systems
+
+
+I enjoy transforming research ideas into production-ready systems using modern engineering practices.
+
+---
+
+# 🎯 Current Focus
+
+```text
+Machine Learning Engineering      ████████████████████░░
+Data Engineering                  ███████████████████░░░
+MLOps                             █████████████████░░░░░
+PyTorch                           ██████████████░░░░░░░░
+System Design                     ███████████░░░░░░░░░░░
+Edge AI                           ███████░░░░░░░░░░░░░░░
+Research                          ██████░░░░░░░░░░░░░░░░
+```
+
+---
+
+# 🔬 Research Interests
+
+* Edge AI
+* TinyML
+* Distributed Machine Learning
+* Autonomous Systems
+* Computer Vision
+* Federated Learning
+* Model Compression
+* Digital Twins
+
+
+---
+
+# 🏗 Featured Projects
+
+## 🌱 EcoLens
+
+AI-powered Carbon Accounting Platform for Australian Businesses
+
+### Key Features
+
+* Multi-Tenant SaaS Architecture
+* Carbon Emission Tracking
+* ESG Reporting
+* AI-Powered Sustainability Insights
+* Carbon Credit Management
+* REST APIs
+* Enterprise Authentication
+
+### Tech Stack
+
+```text
+FastAPI
+PostgreSQL
+Next.js
+Azure
+Docker
+Redis
+Celery
+```
+
+---
+
+## 🤖 AlgoMotion
+
+An open-source platform dedicated to mastering Algorithms, Machine Learning, Computer Vision, and Autonomous Systems through hands-on implementations, research-driven projects, and engineering-focused learning.
+
+### Key Features
+
+* Data Structures & Algorithms from Scratch
+* Machine Learning Implementations
+* Deep Learning with PyTorch
+* Computer Vision Projects
+* Edge AI Experiments
+* Autonomous Systems Foundations
+* Interview Preparation Resources
+* Research-Oriented Learning Pathways
+
+### Focus Areas
+
+```text
+Algorithms & Data Structures
+Machine Learning
+Deep Learning
+PyTorch
+Computer Vision
+Edge AI
+TinyML
+Autonomous Systems
+System Design
+```
+
+### Mission
+
+Transform theoretical concepts into practical implementations while building the foundation required for advanced research in Edge AI, Continual Learning, and Autonomous Systems.
+
+### Tech Stack
+
+```text
+Python
+PyTorch
+NumPy
+OpenCV
+FastAPI
+Docker
+Jupyter
+GitHub Actions
+```
+
+### Long-Term Vision
+
+```text
+Algorithms
+      ↓
+Machine Learning
+      ↓
+Deep Learning
+      ↓
+Computer Vision
+      ↓
+Edge AI
+      ↓
+Continual Learning
+      ↓
+Autonomous Systems
+      ↓
+Research & Innovation
+```
+
+---
+
+# 🛠 Tech Stack
+
+## Programming Languages
+
+<p>
+  <img src="https://skillicons.dev/icons?i=python,js,rust,cpp" />
+</p>
+
+## Backend Development
+
+<p>
+  <img src="https://skillicons.dev/icons?i=fastapi,django,nodejs" />
+</p>
+
+## Databases
+
+<p>
+  <img src="https://skillicons.dev/icons?i=postgres,mongodb,redis" />
+</p>
+
+## Cloud & DevOps
+
+<p>
+  <img src="https://skillicons.dev/icons?i=azure,aws,docker,kubernetes,githubactions" />
+</p>
+
+## Machine Learning
+
+<p>
+  <img src="https://skillicons.dev/icons?i=pytorch,tensorflow" />
+</p>
+
+### Additional Tools
+
+```text
+Apache Airflow
+dbt
+MLflow
+DVC
+Spark
+Kafka
+OpenCV
+Scikit-Learn
+Hugging Face
+Azure DevOps
+```
+
+---
+# 📚 Learning Journey
+
+## Currently Learning
+
+### Edge AI & Autonomous Systems
+
+* Continual Learning for Edge Intelligence
+* TinyML for Large-Scale IoT Systems
+* Edge AI Deployment and Optimization
+* Model Compression & Quantization
+* Federated Learning
+* Embedded Machine Learning
+* Resource-Constrained Deep Learning
+* Real-Time AI Inference at the Edge
+
+### Machine Learning Engineering
+
+* Advanced PyTorch
+* Deep Learning System Design
+* Distributed Training
+* MLOps for Production AI
+* ML Observability & Monitoring
+
+### Data Engineering
+
+* Apache Airflow
+* dbt
+* Data Pipeline Orchestration
+* Data Warehousing
+* Streaming Systems (Kafka)
+
+### Cloud & Infrastructure
+
+* Azure Cloud Architecture
+* Kubernetes for AI Workloads
+* Infrastructure as Code
+* CI/CD for Machine Learning Systems
+
+---
+
+## Currently Reading
+
+* Introduction to Machine Learning with Python
+* Designing Data-Intensive Applications
+* Machine Learning Engineering
+* TinyML
+* Deep Learning (Goodfellow)
+* Probabilistic Machine Learning
+
+---
+
+## Current Research Interests
+
+* Continual Learning
+* Edge Intelligence
+* TinyML
+* Distributed Machine Learning
+* Federated Learning
+* Autonomous Systems
+* Connected Autonomous Vehicles
+* Intelligent Transportation Systems
+* Multi-Agent Systems
+* AI for Resource-Constrained Devices
+
+---
+
+## Future Research Direction
+
+```text
+Machine Learning
+        ↓
+Deep Learning
+        ↓
+MLOps & Data Engineering
+        ↓
+Edge AI
+        ↓
+Continual Learning
+        ↓
+TinyML
+        ↓
+Distributed Edge Intelligence
+        ↓
+Autonomous Systems
+        ↓
+Connected & Autonomous Vehicles
+        ↓
+PhD Research
+```
+
+---
+
+# 🧠 AI Engineering Roadmap
+
+```mermaid
+graph LR
+
+A[Machine Learning Fundamentals]
+--> B[Deep Learning]
+
+B --> C[PyTorch]
+
+C --> D[MLOps]
+
+D --> E[Data Engineering]
+
+E --> F[Distributed Systems]
+
+F --> G[Edge AI]
+
+G --> H[Autonomous Systems]
+
+H --> I[Research & PhD]
+```
+
+---
+
+# 📈 GitHub Analytics
+
+<div align="center">
+
+<img height="170em" src="https://github-readme-stats.vercel.app/api?username=diptu&show_icons=true&theme=tokyonight&hide_border=true"/>
+
+<img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=diptu&layout=compact&theme=tokyonight&hide_border=true"/>
+
+</div>
+
+---
+
+# 🔥 GitHub Streak
+
+<div align="center">
+
+<img src="https://streak-stats.demolab.com?user=diptu&theme=tokyonight&hide_border=true"/>
+
+</div>
+
+---
+
+# 📊 Contribution Graph
+
+<div align="center">
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=diptu&theme=tokyo-night&hide_border=true"/>
+
+</div>
+
+---
+
+# 🏆 10,000-Hour Mastery Journey
+
+My long-term goal is to become a world-class Machine Learning Engineer and AI Researcher.
+
+### Focus Areas
+
+| Area                | Goal           |
+| ------------------- | -------------- |
+| Machine Learning    | Master         |
+| PyTorch             | Master         |
+| Deep Learning       | Master         |
+| MLOps               | Master         |
+| System Design       | Advanced       |
+| Distributed Systems | Advanced       |
+| Research            | PhD Level      |
+| Edge AI             | Research Level |
+| Autonomous Systems  | Research Level |
+
+---
+
+# 🎓 Long-Term Vision
+
+```text
+Today
+ ↓
+Machine Learning Engineer
+ ↓
+Senior ML Engineer
+ ↓
+MLOps Architect
+ ↓
+Edge AI Researcher
+ ↓
+PhD in Edge AI & Autonomous Systems
+ ↓
+AI Founder / Research Scientist
+```
+
+---
+
+# 🤝 Open to Collaborate On
+
+* Machine Learning Projects
+* Open Source AI Tools
+* Data Engineering Pipelines
+* MLOps Infrastructure
+* FastAPI/NESTJS Applications
+* Research Projects
+* Edge AI Systems
+
+---
+
+<div align="center">
+
+### "Building intelligent systems that move from research papers to real-world impact."
+
+⭐ If you find my work interesting, consider following my journey.
+
+</div>

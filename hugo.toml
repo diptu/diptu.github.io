@@ -1,0 +1,63 @@
+baseURL = 'https://diptu.github.io'
+locale = 'en-us'
+title = '~ ❯ diptu'
+theme = 'PaperMod'
+
+[pagination]
+  pagerSize = 2
+  path = 'page'
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  author = 'Nazmul Alam Diptu'
+  description = 'A personal blog about Machine Learning and Software Engineering.'
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+
+[params.profileMode]
+  enabled = true
+  title = 'Nazmul Alam'
+  subtitle = "Building systems that learn. Researching how they keep learning."
+
+[[params.profileMode.buttons]]
+  name = '↓ Resume'
+  url = '/resume.pdf'
+
+[[params.socialIcons]]
+  name = 'github'
+  url = 'https://github.com/diptu'
+
+[[params.socialIcons]]
+  name = 'linkedin'
+  url = 'https://www.linkedin.com/in/diptu/'
+
+[[params.socialIcons]]
+  name = 'facebook'
+  url = 'https://www.facebook.com/nazmulalam.diptu'
+
+[menu]
+  [[menu.main]]
+    identifier = 'search'
+    name = 'Search'
+    url = '/search/'
+    weight = 15
+  [[menu.main]]
+    name = 'Publications'
+    url = '/publications/'
+    weight = 20
+  [[menu.main]]
+    name = 'Blog'
+    url = '/posts/'
+    weight = 30
+  [[menu.main]]
+    name = 'Resume'
+    url = '/resume/'
+    weight = 40

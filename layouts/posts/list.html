@@ -1,0 +1,35 @@
+{{- define "main" }}
+
+{{- if .Title }}
+<header class="page-header">
+  {{- partial "breadcrumbs.html" . }}
+  <h1>{{ .Title }}</h1>
+  {{- if .Content }}
+  <div class="post-description">
+    {{- .Content }}
+  </div>
+  {{- end }}
+</header>
+{{- end }}
+
+{{- $paginator := .Paginate .RegularPages }}
+
+<div class="archive-list">
+  {{- range ($paginator.Pages.GroupByDate "2006") }}
+  <div class="archive-year-group">
+    <p class="archive-year">{{ .Key }}</p>
+    <ul class="archive-posts">
+      {{- range .Pages }}
+      <li class="archive-post-item">
+        <a class="archive-post-link" href="{{ .Permalink }}">{{ .Title }}</a>
+        <time class="archive-post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02" }}</time>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+  {{- end }}
+</div>
+
+{{- partial "pagination.html" . }}
+
+{{- end }}

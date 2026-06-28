@@ -1,0 +1,287 @@
+/* ── Google Fonts: Inter ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+/* ── Base Typography ─────────────────────────────────────────────── */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Theme: Light (default) ──────────────────────────────────────── */
+:root {
+  --theme: #ffffff;
+  --entry: #eaeaea;
+  --primary: #222222;
+  --secondary: #999999;
+  --tertiary: #eaeaea;
+  --content: #222222;
+  --code-block-bg: #f5f5f5;
+  --code-bg: #eaeaea;
+  --border: #dcdcdc;
+}
+
+/* ── Theme: Dark (system preference) ────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme: #232425;
+    --entry: #3b3d42;
+    --primary: #a9a9b3;
+    --secondary: #b3b3bd;
+    --tertiary: #3b3d42;
+    --content: #a9a9b3;
+    --code-block-bg: #3b3d42;
+    --code-bg: #2e2f30;
+    --border: #4e4e57;
+    color-scheme: dark;
+  }
+}
+
+/* ── Theme: Dark (user toggle) ───────────────────────────────────── */
+[data-theme="dark"] {
+  --theme: #232425;
+  --entry: #3b3d42;
+  --primary: #a9a9b3;
+  --secondary: #b3b3bd;
+  --tertiary: #3b3d42;
+  --content: #a9a9b3;
+  --code-block-bg: #3b3d42;
+  --code-bg: #2e2f30;
+  --border: #4e4e57;
+  color-scheme: dark;
+}
+
+/* ── Theme: Light (user toggle) ──────────────────────────────────── */
+[data-theme="light"] {
+  --theme: #ffffff;
+  --entry: #eaeaea;
+  --primary: #222222;
+  --secondary: #999999;
+  --tertiary: #eaeaea;
+  --content: #222222;
+  --code-block-bg: #f5f5f5;
+  --code-bg: #eaeaea;
+  --border: #dcdcdc;
+  color-scheme: light;
+}
+
+/* ── Header ──────────────────────────────────────────────────────── */
+.header {
+  background: #fafafa;
+  border-bottom: 1px solid var(--border);
+}
+
+[data-theme="dark"] .header {
+  background: #1b1c1d;
+}
+
+@media (prefers-color-scheme: dark) {
+  .header {
+    background: #1b1c1d;
+  }
+}
+
+/* ── Pagination ──────────────────────────────────────────────────── */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.pagination a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.15s;
+}
+
+.pagination a:hover {
+  color: var(--primary);
+}
+
+.pagination .disabled {
+  color: var(--secondary);
+  font-size: 0.9rem;
+  opacity: 0.35;
+}
+
+.pagination .page-number {
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+/* ── Archive List (year-grouped post listing) ────────────────────── */
+.archive-list {
+  margin-top: 2rem;
+}
+
+.archive-year-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.archive-year {
+  min-width: 3.5rem;
+  flex-shrink: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--secondary);
+  margin: 0;
+  padding-top: 0.55rem;
+}
+
+.archive-posts {
+  flex: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.archive-post-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.55rem 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+.archive-post-link {
+  text-decoration: none;
+  color: var(--primary);
+  font-size: 0.97rem;
+}
+
+.archive-post-link:hover {
+  color: var(--secondary);
+}
+
+.archive-post-date {
+  color: var(--secondary);
+  font-size: 0.9rem;
+  white-space: nowrap;
+  margin-left: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* ── Search icon in nav ──────────────────────────────────────────── */
+#menu a[href$="/search/"] span {
+  font-size: 0;
+  display: inline-flex;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  background-color: currentColor;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+}
+
+/* ── Resume download button ──────────────────────────────────────── */
+.button {
+  box-shadow: 3px 3px 0px var(--border);
+  transition: box-shadow 0.1s ease, transform 0.1s ease;
+}
+
+.button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+/* ── Publications ────────────────────────────────────────────────── */
+.pub-list {
+  margin-top: 2rem;
+}
+
+.pub-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  margin-bottom: 0;
+}
+
+.pub-year {
+  min-width: 3.5rem;
+  flex-shrink: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--secondary);
+  margin: 0;
+  padding-top: 0.2rem;
+}
+
+.pub-entries {
+  flex: 1;
+}
+
+.pub-entry {
+  padding: 0.75rem 0 1.25rem;
+  border-bottom: 1px dashed var(--border);
+}
+
+.pub-group:last-child .pub-entry:last-child {
+  border-bottom: none;
+}
+
+.pub-title {
+  font-weight: 600;
+  font-size: 0.97rem;
+  color: var(--primary);
+  margin: 0 0 0.4rem;
+  line-height: 1.5;
+}
+
+.pub-authors {
+  font-size: 0.875rem;
+  color: var(--secondary);
+  margin: 0 0 0.2rem;
+}
+
+.pub-me {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.pub-venue {
+  font-size: 0.85rem;
+  color: var(--secondary);
+  margin: 0 0 0.65rem;
+}
+
+.pub-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.pub-tag {
+  font-size: 0.72rem;
+  color: var(--secondary);
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.1rem 0.45rem;
+  letter-spacing: 0.01em;
+}
+
+/* ── Blinking cursor on site logo ────────────────────────────────── */
+.logo a::after {
+  content: '▋';
+  margin-left: 2px;
+  color: #a5cdd6;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}

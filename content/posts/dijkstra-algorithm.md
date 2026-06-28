@@ -1,7 +1,7 @@
 ---
 title: "Dijkstra's Algorithm"
 date: 2026-06-28
-draft: false
+draft: true
 archived: true
 tags: ["Algorithms", "Graph-Search", "Shortest-Path"]
 summary: "The classic single-source shortest path algorithm for weighted graphs with non-negative edges."

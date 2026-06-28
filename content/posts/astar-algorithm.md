@@ -1,7 +1,7 @@
 ---
 title: "A* Search Algorithm"
 date: 2024-11-10
-draft: false
+draft: true
 archived: true
 tags: ["Algorithms", "Pathfinding", "Graph-Search"]
 summary: "An informed search algorithm that finds the shortest path using heuristics to guide exploration."

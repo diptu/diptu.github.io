@@ -4,7 +4,7 @@ title = '~ ❯ diptu'
 theme = 'PaperMod'
 
 [pagination]
-  pagerSize = 2
+  pagerSize = 5
   path = 'page'
 
 [outputs]

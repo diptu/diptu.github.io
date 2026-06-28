@@ -1,0 +1,231 @@
+%-------------------------
+% Resume in Latex
+% Author : Harshibar
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% TODO EBSERIES
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Nazmul Alam Diptu} \\ \vspace{5pt}
+    \small \faPhone* \texttt{+880-1845511889} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \href{mailto:diptunazmulalam@gmail.com}{\texttt{diptunazmulalam@gmail.com}} \hspace{1pt} $|$
+    \hspace{1pt} \faLinkedin \hspace{2pt} \href{https://www.linkedin.com/in/diptu/}{\texttt{linkedin.com/in/diptu}} \hspace{1pt} $|$
+    \hspace{1pt} \faGithub \hspace{2pt} \href{https://diptu.github.io/}{\texttt{diptu.github.io}} \\
+    \faMapMarker* \hspace{2pt}\texttt{Dhaka, Bangladesh}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\href{https://www.northsouth.edu/}{North South University}}{May 2019 -- May 2025}
+      {Lab Instructor}{Dhaka, Bangladesh}
+      \resumeItemListStart
+        \resumeItem{Delivered 5 years of lab instruction in \textbf{C, Java, Data Structures, Databases, and Web Technologies}; mentored 1000+ undergraduates in algorithmic problem-solving and research methodology}
+        \resumeItem{Collaborated with faculty on \textbf{curriculum design and student assessment}, contributing directly to program-level academic outcomes}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://solshare.com/}{Me-Solshare Ltd}}{Nov. 2019 -- Aug. 2021}
+      {Jr. Data Scientist}{Dhaka, Bangladesh}
+      \resumeItemListStart
+        \resumeItem{Built \textbf{CNN-based time-series models achieving 95\% accuracy} for energy forecasting; applied statistical modeling and experimental evaluation aligned with graduate-level ML research practice}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {\href{https://powerledger.io/}{Power Ledger Pty Ltd}}{Oct. 2022 -- Feb. 2024}
+      {Product Analyst}{Perth, Australia (Remote)}
+      \resumeItemListStart
+        \resumeItem{Performed \textbf{data analysis, system QA, and technical reporting} for a blockchain energy trading platform; bridged engineering and product teams across international time zones}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PUBLICATIONS / PROJECTS-----------
+
+\section{PUBLICATIONS \& PROJECTS}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{End-to-End OCR via Synthetic Dataset Generation} {\small\textit{(IJCCI 2020, Springer)}}}{Md. Shopon, \textbf{N. A. Diptu}, N. Mohammed}
+          \resumeItemListStart
+            \resumeItem{Trained a \textbf{deep-learning OCR model} on synthetically generated noisy images; improved robustness in low-quality document recognition $|$ \href{https://doi.org/10.1007/978-981-15-3607-6_41}{\myuline{doi:10.1007/978-981-15-3607-6\_41}}}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Population Estimation of Rohingya Refugees via ANN} {\small\textit{(VJCS 2019, World Scientific)}}}{N. Ahmed, \textbf{N. A. Diptu}, et al.}
+          \resumeItemListStart
+            \resumeItem{Modeled refugee population using \textbf{Artificial Neural Networks} on satellite and census data; applied to humanitarian resource planning $|$ \href{https://doi.org/10.1142/S2196888819500246}{\myuline{doi:10.1142/S2196888819500246}}}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/diptu/CarbonIQ/}{CarbonIQ}} \textemdash{} AI-Powered Carbon Accounting Platform}{FastAPI $\cdot$ PyTorch $\cdot$ Airflow $\cdot$ dbt $\cdot$ PostgreSQL $\cdot$ Docker}
+          \resumeItemListStart
+            \resumeItem{Designed \textbf{time-series CO$_2$e forecasting pipelines} and automated ETL/ELT workflows; built multi-tenant API architecture with containerized, reproducible MLOps infrastructure}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {North South University}{Jan. 2015 -- Dec. 2018}
+      {Bachelor of Science in Computer Science and Engineering}{Dhaka, Bangladesh}
+        \resumeItemListStart
+          \resumeItem{\textbf{CGPA: 3.62 / 4.0} $|$ \textbf{Coursework}: Machine Learning, Algorithms, Databases, Computer Systems, OOP}
+          \resumeItem{\textbf{Certifications}: Deep Learning Specialization (DeepLearning.AI, 2022); Machine Learning Specialization (Stanford/Coursera, 2021)}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages}      {: Python, C, C++, JavaScript/TypeScript, Java, SQL}\vspace{2pt} \\
+     \textbf{ML \& Research} {: PyTorch, TensorFlow, scikit-learn, MLflow, Airflow, dbt, Pandas, NumPy, Matplotlib}\vspace{2pt} \\
+     \textbf{Tools \& Cloud} {: FastAPI, Docker, PostgreSQL, MongoDB, GitHub Actions, AWS, Linux, \LaTeX}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}

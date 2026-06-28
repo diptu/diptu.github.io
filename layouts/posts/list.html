@@ -12,7 +12,8 @@
 </header>
 {{- end }}
 
-{{- $paginator := .Paginate .RegularPages }}
+{{- $pages := where .RegularPages "Params.archived" "ne" true }}
+{{- $paginator := .Paginate $pages }}
 
 <div class="archive-list">
   {{- range ($paginator.Pages.GroupByDate "2006") }}
@@ -31,5 +32,9 @@
 </div>
 
 {{- partial "pagination.html" . }}
+
+<div class="archive-link-wrapper">
+  <a href="/archives/" class="archive-link">Archived Posts →</a>
+</div>
 
 {{- end }}

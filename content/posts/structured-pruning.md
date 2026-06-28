@@ -1,8 +1,11 @@
 ---
-title: "✨ Structured Pruning ✨"
-date: 2026-06-28
+title: "Structured 🤝🏾 Pruning"
+date: 2026-06-27
+draft: false
+archived: false
 tags: ["ML", "Quantization", "Model-Pruning"]
 summary: "Reducing model size and inference latency through structured weight pruning techniques for edge deployment."
+
 ---
 
 ## Structured pruning 

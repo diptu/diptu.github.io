@@ -48,7 +48,7 @@
 
 % custom font: helvetica-style
 \usepackage{tgheros}
-\renewcommand*\familydefault{\sfdefault} 
+\renewcommand*\familydefault{\sfdefault}
 %% Only if the base font of the document is to be sans serif
 \usepackage[T1]{fontenc}
 
@@ -63,8 +63,8 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{0in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\textheight}{1.8in}
 
 \urlstyle{same}
 
@@ -80,8 +80,9 @@
 % TODO EBSERIES
 % sans serif sections
 \titleformat {\section}{
-    \bfseries \vspace{2pt} \raggedright \large % header section
-}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+    \bfseries \vspace{0pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-6pt}]
+\titlespacing*{\section}{0pt}{4pt}{2pt}
 
 % only for pdflatex
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -91,16 +92,16 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-1pt}}
+    {#1 \vspace{-3pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
+  \vspace{-2pt}\item
     \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
       \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
-    \end{tabular*}\vspace{-4pt}
+    \end{tabular*}\vspace{-6pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
@@ -114,7 +115,7 @@
     \item
     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
       #1 & {\color{dark-grey}} \\
-    \end{tabular*}\vspace{-4pt}
+    \end{tabular*}\vspace{-6pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -142,37 +143,55 @@
     \hspace{1pt} \faEnvelope \hspace{2pt} \href{mailto:diptunazmulalam@gmail.com}{\texttt{diptunazmulalam@gmail.com}} \hspace{1pt} $|$
     \hspace{1pt} \faLinkedin \hspace{2pt} \href{https://www.linkedin.com/in/diptu/}{\texttt{linkedin.com/in/diptu}} \hspace{1pt} $|$
     \hspace{1pt} \faGithub \hspace{2pt} \href{https://diptu.github.io/}{\texttt{diptu.github.io}} \\
-    \faMapMarker* \hspace{2pt}\texttt{Dhaka, Bangladesh}
+    \faGraduationCap \hspace{2pt} \href{https://scholar.google.com/citations?user=4e8-JGgAAAAJ&hl=en}{\texttt{Google Scholar}} \hspace{1pt} $|$
+    \hspace{1pt} \faOrcid \hspace{2pt} \href{https://orcid.org/0009-0003-5322-5975}{\texttt{ORCID}} \hspace{1pt} $|$
+    \hspace{1pt} \faMapMarker* \hspace{2pt}\texttt{Dhaka, Bangladesh}
     \\ \vspace{-3pt}
 \end{center}
 
+
+
+%-----------RESEARCH SUMMARY-----------
+\section{RESEARCH SUMMARY}
+
+Focused on mathematically grounded, efficient transformer inference and long-context optimization; targeting Fall 2027 PhD admissions.
+%-----------RESEARCH PROJECTS-----------
+\section{RESEARCH PROJECTS}
+
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{Mathematical Foundations of Efficient Transformers}}{}
+\resumeItemListStart
+\resumeItem{Developing a theoretical framework for transformer inference, emphasizing KV cache compression and attention scaling.}
+\resumeItem{Curating rigorous derivations in linear algebra and optimization to advance doctoral research on LLM efficiency.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+
 %-----------EXPERIENCE-----------
 \section{EXPERIENCE}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
 
-    \resumeSubheading
-      {\href{https://www.northsouth.edu/}{North South University}}{May 2019 -- May 2025}
-      {Lab Instructor}{Dhaka, Bangladesh}
-      \resumeItemListStart
-        \resumeItem{Delivered 5 years of lab instruction in \textbf{C, Java, Data Structures, Databases, and Web Technologies}; mentored 1000+ undergraduates in algorithmic problem-solving and research methodology}
-        \resumeItem{Collaborated with faculty on \textbf{curriculum design and student assessment}, contributing directly to program-level academic outcomes}
-      \resumeItemListEnd
+\resumeSubheading
+  {\href{https://www.northsouth.edu/}{North South University}}{May 2019 -- May 2025}
+  {Lab Instructor}{Dhaka, Bangladesh}
+  \resumeItemListStart
+    \resumeItem{Instructed 1000+ undergraduates in \textbf{core CS theory} and algorithmic problem-solving; led curriculum design and assessment strategies.}
+  \resumeItemListEnd
 
-    \resumeSubheading
-      {\href{https://solshare.com/}{Me-Solshare Ltd}}{Nov. 2019 -- Aug. 2021}
-      {Jr. Data Scientist}{Dhaka, Bangladesh}
-      \resumeItemListStart
-        \resumeItem{Built \textbf{CNN-based time-series models achieving 95\% accuracy} for energy forecasting; applied statistical modeling and experimental evaluation aligned with graduate-level ML research practice}
-      \resumeItemListEnd
+\resumeSubheading
+  {\href{https://solshare.com/}{Me-Solshare Ltd}}{Nov. 2019 -- Aug. 2021}
+  {Jr. Data Scientist}{Dhaka, Bangladesh}
+  \resumeItemListStart
+    \resumeItem{Engineered \textbf{high-accuracy CNNs} for time-series energy forecasting, utilizing rigorous statistical evaluation methods.}
+  \resumeItemListEnd
 
-    \resumeSubheading
-      {\href{https://powerledger.io/}{Power Ledger Pty Ltd}}{Oct. 2022 -- Feb. 2024}
-      {Product Analyst}{Perth, Australia (Remote)}
-      \resumeItemListStart
-        \resumeItem{Performed \textbf{data analysis, system QA, and technical reporting} for a blockchain energy trading platform; bridged engineering and product teams across international time zones}
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
+\resumeSubheading
+  {\href{https://powerledger.io/}{Power Ledger Pty Ltd}}{Oct. 2022 -- Feb. 2024}
+  {Product Analyst}{Remote}
+  \resumeItemListStart
+    \resumeItem{Managed \textbf{technical data analysis and QA} for a blockchain platform, facilitating cross-functional alignment.}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 
 %-----------PUBLICATIONS / PROJECTS-----------
@@ -193,6 +212,12 @@
           \resumeItemListEnd
 
       \resumeProjectHeading
+          {\textbf{Early Detection of Glaucoma Using Fuzzy Logic in Bangladesh Context} {\small\textit{(IS 2018, IEEE)}}}{\textbf{N. A. Diptu}, M. A. Khan, S. Debnath, A. Al Imam, A. M. H. Rakib, K. A. A. Ador, R. M. Rahman}
+          \resumeItemListStart
+            \resumeItem{Built an \textbf{ANFIS-based fuzzy logic model} for early glaucoma detection from OCT and tonometry data; addressed diagnostic access gaps in Bangladesh $|$ \href{https://doi.org/10.1109/IS.2018.8710490}{\myuline{doi:10.1109/IS.2018.8710490}}}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
           {\textbf{\href{https://github.com/diptu/CarbonIQ/}{CarbonIQ}} \textemdash{} AI-Powered Carbon Accounting Platform}{FastAPI $\cdot$ PyTorch $\cdot$ Airflow $\cdot$ dbt $\cdot$ PostgreSQL $\cdot$ Docker}
           \resumeItemListStart
             \resumeItem{Designed \textbf{time-series CO$_2$e forecasting pipelines} and automated ETL/ELT workflows; built multi-tenant API architecture with containerized, reproducible MLOps infrastructure}
@@ -200,32 +225,27 @@
 
     \resumeSubHeadingListEnd
 
-
-
 %-----------EDUCATION-----------
 \section{EDUCATION}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {North South University}{Jan. 2015 -- Dec. 2018}
-      {Bachelor of Science in Computer Science and Engineering}{Dhaka, Bangladesh}
-        \resumeItemListStart
-          \resumeItem{\textbf{CGPA: 3.62 / 4.0} $|$ \textbf{Coursework}: Machine Learning, Algorithms, Databases, Computer Systems, OOP}
-          \resumeItem{\textbf{Certifications}: Deep Learning Specialization (DeepLearning.AI, 2022); Machine Learning Specialization (Stanford/Coursera, 2021)}
-        \resumeItemListEnd
-  \resumeSubHeadingListEnd
+\resumeSubHeadingListStart
+\resumeSubheading
+{\href{https://www.northsouth.edu/}{North South University}}{2015 -- 2018}
+{B.Sc. in Computer Science and Engineering}{Dhaka, Bangladesh}
+\resumeItemListStart
+\resumeItem{\textbf{Honors}: CGPA 3.62/4.00. \textbf{Core}: ML, Algorithms, Databases, Systems, OOP.}
+\resumeItem{\textbf{Merit Scholarship}: 25\% tuition scholarship awarded based on academic performance.}
+\resumeItem{\textbf{Certifications}: Deep Learning Specialization (DeepLearning.AI, 2022), Machine Learning Specialization (Stanford/Coursera, 2021).}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
 
-
-%
-%-----------PROGRAMMING SKILLS-----------
+%-----------SKILLS-----------
 \section{SKILLS}
- \begin{itemize}[leftmargin=0in, label={}]
-    \small{\item{
-     \textbf{Languages}      {: Python, C, C++, JavaScript/TypeScript, Java, SQL}\vspace{2pt} \\
-     \textbf{ML \& Research} {: PyTorch, TensorFlow, scikit-learn, MLflow, Airflow, dbt, Pandas, NumPy, Matplotlib}\vspace{2pt} \\
-     \textbf{Tools \& Cloud} {: FastAPI, Docker, PostgreSQL, MongoDB, GitHub Actions, AWS, Linux, \LaTeX}
-    }}
- \end{itemize}
-
-
+\begin{itemize}[leftmargin=0in, label={}]
+\small{\item{
+\textbf{Languages}      {: Python, C/C++, Java, JS/TS, SQL} \\
+\textbf{ML \& Research} {: PyTorch, TensorFlow, NumPy/Pandas, SciKit-Learn, MLflow} \\
+\textbf{Tools \& Cloud} {: FastAPI, Docker, PostgreSQL/MongoDB, AWS, Linux, \LaTeX}
+}}
+\end{itemize}
 %-------------------------------------------
 \end{document}

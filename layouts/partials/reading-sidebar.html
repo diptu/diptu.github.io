@@ -1,0 +1,134 @@
+<aside class="reading-sidebar">
+    <div class="sidebar-controls">
+        <button type="button" class="sidebar-btn" id="zoom-out" title="Decrease text size (−)" aria-label="Decrease text size">A−</button>
+        <button type="button" class="sidebar-btn" id="zoom-reset" title="Reset text size (0)" aria-label="Reset text size">A</button>
+        <button type="button" class="sidebar-btn" id="zoom-in" title="Increase text size (+)" aria-label="Increase text size">A+</button>
+        <button type="button" class="sidebar-btn" id="fullscreen-toggle" title="Toggle fullscreen (F)" aria-label="Toggle fullscreen">⛶</button>
+    </div>
+    {{- with .TableOfContents }}
+    <nav class="sidebar-toc" aria-label="Section navigation">
+        {{ . }}
+    </nav>
+    {{- end }}
+</aside>
+
+<script>
+(function () {
+    var root = document.documentElement;
+    var STORAGE_KEY = 'home-zoom';
+    var MIN = 0.85, MAX = 1.3, STEP = 0.1, DEFAULT = 1;
+
+    function applyZoom(scale) {
+        root.style.fontSize = (16 * scale) + 'px';
+    }
+
+    function getStoredZoom() {
+        var v = parseFloat(localStorage.getItem(STORAGE_KEY));
+        return isNaN(v) ? DEFAULT : v;
+    }
+
+    function setZoom(scale) {
+        scale = Math.min(MAX, Math.max(MIN, scale));
+        localStorage.setItem(STORAGE_KEY, scale);
+        applyZoom(scale);
+    }
+
+    applyZoom(getStoredZoom());
+
+    function zoomIn() { setZoom(getStoredZoom() + STEP); }
+    function zoomOut() { setZoom(getStoredZoom() - STEP); }
+    function zoomReset() { setZoom(DEFAULT); }
+
+    var zoomOutBtn = document.getElementById('zoom-out');
+    var zoomInBtn = document.getElementById('zoom-in');
+    var zoomResetBtn = document.getElementById('zoom-reset');
+
+    if (zoomOutBtn) zoomOutBtn.addEventListener('click', zoomOut);
+    if (zoomInBtn) zoomInBtn.addEventListener('click', zoomIn);
+    if (zoomResetBtn) zoomResetBtn.addEventListener('click', zoomReset);
+
+    var fsBtn = document.getElementById('fullscreen-toggle');
+
+    function toggleFullscreen() {
+        if (!document.fullscreenElement) {
+            if (root.requestFullscreen) root.requestFullscreen().catch(function () {});
+        } else if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+
+    if (fsBtn) {
+        fsBtn.addEventListener('click', toggleFullscreen);
+        document.addEventListener('fullscreenchange', function () {
+            fsBtn.classList.toggle('is-active', !!document.fullscreenElement);
+        });
+    }
+
+    function isTypingTarget(el) {
+        if (!el) return false;
+        if (el.isContentEditable) return true;
+        var tag = el.tagName;
+        return tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT';
+    }
+
+    document.addEventListener('keydown', function (e) {
+        if (e.ctrlKey || e.metaKey || e.altKey) return;
+        if (isTypingTarget(e.target)) return;
+
+        switch (e.key) {
+            case '+':
+            case '=':
+                e.preventDefault();
+                zoomIn();
+                break;
+            case '-':
+            case '_':
+                e.preventDefault();
+                zoomOut();
+                break;
+            case '0':
+                e.preventDefault();
+                zoomReset();
+                break;
+            case 'f':
+            case 'F':
+                e.preventDefault();
+                toggleFullscreen();
+                break;
+        }
+    });
+
+    function initScrollspy() {
+        var tocLinks = document.querySelectorAll('.sidebar-toc a[href^="#"]');
+        if (!tocLinks.length || !('IntersectionObserver' in window)) return;
+
+        var map = {};
+        tocLinks.forEach(function (link) {
+            var id = decodeURIComponent(link.getAttribute('href').slice(1));
+            var el = document.getElementById(id);
+            if (el) map[id] = link;
+        });
+
+        var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                var link = map[entry.target.id];
+                if (!link || !entry.isIntersecting) return;
+                tocLinks.forEach(function (l) { l.classList.remove('is-active'); });
+                link.classList.add('is-active');
+            });
+        }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+
+        Object.keys(map).forEach(function (id) {
+            observer.observe(document.getElementById(id));
+        });
+    }
+
+    // The sidebar is rendered before the main content in the DOM, so the
+    // headings it links to may not exist yet when this script runs.
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initScrollspy);
+    } else {
+        initScrollspy();
+    }
+})();
+</script>

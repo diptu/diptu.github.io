@@ -6,7 +6,6 @@ archived: false
 tags: ["ML", "Model Compression", "Model-Pruning", "Deep Learning"]
 summary: "Reduce model size by removing individual weights while maintaining model accuracy through sparse neural networks."
 ---
-# Unstructured 🤝🏾 Pruning
 
 Unstructured pruning is a model compression technique that removes **individual weights** from a neural network rather than entire neurons or channels. Instead of deleting complete structures, it sets less important weights to **zero**, creating a **sparse neural network**.
 

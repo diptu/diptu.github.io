@@ -1,6 +1,6 @@
 baseURL = 'https://diptu.github.io'
 locale = 'en-us'
-title = '~ ❯ diptu'
+title = 'Nazmul Alam Diptu'
 theme = 'PaperMod'
 
 [pagination]
@@ -13,9 +13,13 @@ theme = 'PaperMod'
 [markup.goldmark.renderer]
   unsafe = true
 
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 2
+
 [params]
   author = 'Nazmul Alam Diptu'
-  description = 'A personal blog about Machine Learning and Software Engineering.'
+  description = 'Nazmul Alam Diptu — working on efficient transformer inference and KV cache compression, transitioning into a PhD in theoretical machine learning.'
   defaultTheme = 'auto'
   ShowReadingTime = true
   ShowPostNavLinks = true
@@ -25,7 +29,9 @@ theme = 'PaperMod'
 [params.profileMode]
   enabled = true
   title = 'Nazmul Alam'
-  subtitle = "Building systems that learn. Researching how they keep learning."
+  subtitle = """
+  **Aspiring Researcher — Theoretical Machine Learning · Efficient Transformers · KV Cache Compression**
+  """
 
 [[params.profileMode.buttons]]
   name = '↓ Resume'
@@ -43,6 +49,20 @@ theme = 'PaperMod'
   name = 'facebook'
   url = 'https://www.facebook.com/nazmulalam.diptu'
 
+[[params.socialIcons]]
+  name = 'googlescholar'
+  title = 'Google Scholar'
+  url = 'https://scholar.google.com/citations?user=4e8-JGgAAAAJ&hl=en'
+
+[[params.socialIcons]]
+  name = 'email'
+  url = 'mailto:diptunazmulalam@gmail.com'
+
+[[params.socialIcons]]
+  name = 'orcid'
+  title = 'ORCID'
+  url = 'https://orcid.org/0009-0003-5322-5975'
+
 [menu]
   [[menu.main]]
     identifier = 'search'
@@ -50,14 +70,6 @@ theme = 'PaperMod'
     url = '/search/'
     weight = 15
   [[menu.main]]
-    name = 'Publications'
-    url = '/publications/'
-    weight = 20
-  [[menu.main]]
     name = 'Blog'
     url = '/posts/'
     weight = 30
-  [[menu.main]]
-    name = 'Resume'
-    url = '/resume/'
-    weight = 40

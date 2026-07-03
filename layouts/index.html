@@ -1,0 +1,38 @@
+{{- define "main" }}
+
+<div class="profile home-hero">
+    <div class="profile_inner">
+        <h1>{{ site.Params.profileMode.title | default site.Title | markdownify }}</h1>
+        {{- with site.Params.profileMode.subtitle }}
+        <span>{{ . | markdownify }}</span>
+        {{- end }}
+    </div>
+</div>
+
+{{- if .Content }}
+{{- partial "reading-sidebar.html" . }}
+<div class="post-content md-content home-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+</div>
+{{- end }}
+
+<div class="home-footer-cta">
+    <p>Working on efficient inference, KV cache compression, or transformer theory? I'd love to talk — reach out, or grab the full CV.</p>
+    {{- with site.Params.profileMode.buttons }}
+    <div class="buttons">
+        {{- range . }}
+        <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name }}">
+            <span class="button-inner">{{ .name }}</span>
+        </a>
+        {{- end }}
+    </div>
+    {{- end }}
+</div>
+
+<div class="home-footer-icons">
+    {{- partial "social_icons.html" -}}
+</div>
+
+{{- end }}

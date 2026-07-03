@@ -8,7 +8,6 @@ summary: "Reducing model size and inference latency through structured weight pr
 
 ---
 
-## Structured pruning 
 
 Structured pruning removes entire channels, filters, or layers from a neural network rather than individual weights. This produces hardware-friendly sparse models that can run efficiently on GPUs and edge accelerators.
 

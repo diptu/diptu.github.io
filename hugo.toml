@@ -30,7 +30,7 @@ theme = 'PaperMod'
   enabled = true
   title = 'Nazmul Alam'
   subtitle = """
-  **Aspiring Researcher — Theoretical Machine Learning · Efficient Transformers · KV Cache Compression**
+  **Machine Learning Engineer · Aspiring Edge AI Researcher**
   """
 
 [[params.profileMode.buttons]]

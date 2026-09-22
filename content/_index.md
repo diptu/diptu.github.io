@@ -6,18 +6,86 @@ draft: false
 
 ## Research Summary
 
-My research focuses on the theoretical foundations of KV cache compression in transformer inference — understanding when and why attention memory is compressible, and designing methods with provable guarantees rather than purely empirical heuristics.
 
-I bring a background in production ML systems and software engineering to this transition into theoretical machine learning research, including:
+**Building efficient, reliable machine learning systems for real-world and resource-constrained environments.**
 
-- Provable memory-efficient transformer methods
-- Low-rank and sparse attention mechanisms
-- Information-theoretic limits of KV cache usage
-- Scalable long-context inference algorithms
+I work at the intersection of **machine learning, software engineering, data systems, and efficient computing**. I build production-oriented ML systems and explore **Edge AI, TinyML, model efficiency, continual learning, resource-aware intelligence, and ML for energy and sustainability**.
 
-I am currently focused full-time on this research foundation as I prepare to apply to PhD programs.
+I hold a Bachelor’s degree in Computer Science with experience spanning machine learning, data analysis, software engineering, technical systems, and product/data platforms.
+
+
+My current research direction is efficient and resource-constrained AI, with a particular interest in Edge AI and TinyML.
+
+I am interested in systems where machine learning has to work under real constraints:
+
+- limited compute
+
+- limited memory
+
+- limited energy
+
+- latency requirements
+
+- unreliable or limited connectivity
+
+- continuously changing data
+
+- imperfect sensors and noisy environments
+
+- deployment and maintenance constraints
+
+Rather than treating model accuracy as the only objective, I am interested in the broader question:
+
+How can intelligent systems become smaller, faster, more adaptive, and more reliable without losing the properties that make them useful?
+
+This motivates my interest in efficient ML, model compression, pruning, quantization, continual learning, time-series intelligence, distributed ML systems, autonomous systems, and sustainable AI.
 
 ---
+## Research Interests
+
+### Primary Direction
+
+#### Edge AI & TinyML
+
+I am interested in machine learning systems that can operate close to where data is generated, particularly when computation, memory, energy, or connectivity are constrained.
+
+Areas of interest include:
+
+- Edge AI
+
+- TinyML
+
+- resource-aware machine learning
+
+- efficient inference
+
+- model compression
+
+- structured pruning
+
+- quantization
+
+- hardware-aware ML
+
+- on-device learning
+
+- continual learning
+
+- adaptive intelligence
+
+# Featured Project
+
+## [EcoLens](https://ecolense.diptuverse.com/)
+
+### Real-Time Energy & Carbon Intelligence Platform
+
+**ML Systems · Time-Series Forecasting · Data Engineering · Efficient ML · Energy & Sustainability**
+
+EcoLens is an end-to-end energy intelligence platform designed around electricity demand, carbon intensity, forecasting, and data integration across Australian electricity markets.
+
+The project combines a production-oriented data platform with machine learning forecasting and uncertainty estimation.
+
+
 
 ## Publications
 
@@ -36,37 +104,20 @@ International Conference on Intelligent Systems, 2018
 
 ---
 
-## Current Research
-
-**Theoretical KV Cache Compression & Efficient Transformers** — independent, full-time | 2026 – Present
-
-I'm studying the mathematical foundations of attention and KV cache memory, guided by one question: does this concept help explain or reduce memory cost in transformer inference? Concretely, I'm:
-
-- Building structured notes on linear algebra, probability, and information theory as they apply to attention mechanisms
-- Analyzing modern efficient-attention and cache-management methods ([FlashAttention](https://arxiv.org/abs/2205.14135), [PagedAttention](https://arxiv.org/abs/2309.06180), [SnapKV](https://arxiv.org/abs/2404.14469), [KIVI](https://arxiv.org/abs/2402.02750), [H2O](https://arxiv.org/abs/2306.14048), [StreamingLLM](https://arxiv.org/abs/2309.17453)) for their theoretical structure, not just their engineering
-- Formulating open questions at the intersection of information theory and long-context inference
-
-**Open questions I'm exploring:**
-- Is there a principled information-theoretic lower bound on KV cache size for a given generation-quality tolerance — and how close do heuristics like [H2O](https://arxiv.org/abs/2306.14048), [SnapKV](https://arxiv.org/abs/2404.14469), and [KIVI](https://arxiv.org/abs/2402.02750) come to it?
-- Can attention redundancy across layers and heads be characterized precisely enough (via low-rank or sparse structure) to design compression methods with provable reconstruction guarantees, rather than empirically-tuned thresholds?
-- Does KV cache compression trade off against long-context reasoning quality fundamentally, or can structure-aware compression preserve long-range dependencies without loss in practice?
-
----
-
 ## Education
 
-**[North South University](https://www.northsouth.edu/)**  
-Bachelor of Science in Computer Science and Engineering  
-Jan 2015 – Dec 2018  
+**[North South University](https://www.northsouth.edu/)**
+Bachelor of Science in Computer Science and Engineering
+Jan 2015 – Dec 2018
 CGPA: 3.62 / 4.00
 
 **Merit Scholarship:** 25% tuition scholarship awarded based on academic performance
 
-**Focus Areas (Relevant Coursework Exposure):**  
-- Data Structures & Algorithms  
-- Database Systems  
-- Machine Learning Foundations  
-- Programming (C, Java, Web Technologies)  
+**Focus Areas (Relevant Coursework Exposure):**
+- Data Structures & Algorithms
+- Database Systems
+- Machine Learning Foundations
+- Programming (C, Java, Web Technologies)
 - Probability & Statistics (course-level exposure)
 
 ---

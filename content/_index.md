@@ -5,85 +5,47 @@ draft: false
 ---
 
 ## Research Summary
+I am seeking **Ph.D. or Research-Track M.S. positions (with GRA/GTA funding)** in Computer Science and Computer Engineering.
 
+My work sits at the intersection of **ML Systems, Edge Computing, and Applied Time-Series Intelligence**. Rather than treating raw model capacity as the sole objective, I research how models can operate efficiently under severe physical constraints:
+- **Compute & Memory Constraints:** Microcontrollers (MCUs) and low-power edge platforms.
+- **Energy & Power Budgets:** Real-time energy systems, grid carbon forecasting, and low-power IoT deployment.
+- **Data & Network Bottlenecks:** On-device streaming inference under unreliable connectivity.
 
-**Building efficient, reliable machine learning systems for real-world and resource-constrained environments.**
-
-I work at the intersection of **machine learning, software engineering, data systems, and efficient computing**. I build production-oriented ML systems and explore **Edge AI, TinyML, model efficiency, continual learning, resource-aware intelligence, and ML for energy and sustainability**.
-
-I hold a Bachelor’s degree in Computer Science with experience spanning machine learning, data analysis, software engineering, technical systems, and product/data platforms.
-
-
-My current research direction is efficient and resource-constrained AI, with a particular interest in Edge AI and TinyML.
-
-I am interested in systems where machine learning has to work under real constraints:
-
-- limited compute
-
-- limited memory
-
-- limited energy
-
-- latency requirements
-
-- unreliable or limited connectivity
-
-- continuously changing data
-
-- imperfect sensors and noisy environments
-
-- deployment and maintenance constraints
-
-Rather than treating model accuracy as the only objective, I am interested in the broader question:
-
-How can intelligent systems become smaller, faster, more adaptive, and more reliable without losing the properties that make them useful?
-
-This motivates my interest in efficient ML, model compression, pruning, quantization, continual learning, time-series intelligence, distributed ML systems, autonomous systems, and sustainable AI.
+With 4+ years of academic lab instructior and industry software/ML engineering experience, I am fully prepared to contribute immediately to funded lab research (GRA) or course instruction (GTA).
 
 ---
-## Research Interests
+## Target Research Directions
 
-### Primary Direction
 
-#### Edge AI & TinyML
+## Prospective Graduate Research Focus
 
-I am interested in machine learning systems that can operate close to where data is generated, particularly when computation, memory, energy, or connectivity are constrained.
+I am seeking advisor alignment and research lab opportunities around three main themes:
 
-Areas of interest include:
+1. **Hardware-Aware Compression for Sensor Networks:** Developing structured pruning, quantization, and ONNX/TFLite runtime optimizations for streaming time-series models on microcontrollers.
+2. **On-Device Adaptation:** Creating low-memory continual learning algorithms that enable edge sensors to adapt to dynamic sensor drift without catastrophic forgetting.
+3. **Sustainable ML Systems:** Measuring and optimizing the energy footprint of ML workloads in edge environments (relevant to smart energy grids and embedded IoT).
 
-- Edge AI
-
-- TinyML
-
-- resource-aware machine learning
-
-- efficient inference
-
-- model compression
-
-- structured pruning
-
-- quantization
-
-- hardware-aware ML
-
-- on-device learning
-
-- continual learning
-
-- adaptive intelligence
-
-# Featured Project
+# Featured Project & Systems Artifact
 
 ## [EcoLens](https://ecolense.diptuverse.com/)
+### High-Throughput Energy & Carbon Intelligence Platform for Constrained Time-Series Inference
 
-### Real-Time Energy & Carbon Intelligence Platform
+**ML Systems · Hardware-Aware ML · Time-Series Forecasting · Pipeline Optimization · Energy & Sustainability**
 
-**ML Systems · Time-Series Forecasting · Data Engineering · Efficient ML · Energy & Sustainability**
+[Live Platform](https://ecolense.diptuverse.com/) · [GitHub Repository](https://github.com/diptu)
 
-EcoLens is an end-to-end energy intelligence platform designed around electricity demand, carbon intensity, forecasting, and data integration across Australian electricity markets.
+EcoLens is an end-to-end, production-oriented ML systems platform designed for high-frequency electricity demand, dynamic grid carbon intensity, and uncertainty-aware time-series forecasting across Australian electricity markets (NEM).
 
-The project combines a production-oriented data platform with machine learning forecasting and uncertainty estimation.
+Built to address the challenges of deploying deep time-series models on continuous, high-rate sensor streams, EcoLens focuses on balancing predictive accuracy with strict runtime constraints, low latency, and operational efficiency.
+
+### Key Systems & Research Contributions
+- **Low-Latency Inference Pipeline:** Optimized model runtimes and data transformations to deliver real-time demand and carbon intensity predictions with sub-100ms API response times under continuous streaming workloads.
+- **Resource-Aware Time-Series Forecasting:** Built deep probabilistic and recurrent models optimized for low memory footprints, targeting edge-and-cloud hybrid deployments without sacrificing prediction calibration or uncertainty estimation.
+- **Scalable Data & MLOps Architecture:** Engineered an asynchronous ETL/ELT pipeline (FastAPI, Docker, PostgreSQL) with automated drift detection and backtesting loops to handle high-frequency time-series data without compute overhead.
+- **Sustainability & Energy Systems Application:** Quantified dynamic carbon footprints in real time, demonstrating how efficient ML systems can optimize energy storage dispatch and grid load-balancing decisions.
+
+---
 
 
 
@@ -134,11 +96,14 @@ CGPA: 3.62 / 4.00
 
 ---
 
+
 ### Lab Instructor
-**[North South University](https://www.northsouth.edu/) | May 2019 – May 2025**
-- Taught C, Java, Data Structures, Databases, and Web Technologies
-- Mentored students in programming and algorithmic thinking
-- Assisted in lab-based problem solving and coursework evaluation
+**[North South University](https://www.northsouth.edu/) | May 2019 – Aug 2022, Feb 2025 – May 2026**
+*Note: Service paused Aug 2022 – Jan 2025 due to full-time software/ML industry scheduling.*
+
+- Instructed undergraduate lab sections in **C, Java, Data Structures, Database Systems, and Web Technologies**.
+- Mentored students in core CS fundamentals, algorithmic complexity, and structured problem-solving.
+- Designed lab coursework evaluation frameworks and guided hands-on implementation sessions.
 
 ---
 
